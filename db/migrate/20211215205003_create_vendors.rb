@@ -3,9 +3,11 @@ class CreateVendors < ActiveRecord::Migration[6.1]
     create_table :vendors do |t|
       t.string :name
       t.string :address
-      t.integer :rating
+      t.float :lat
+      t.float :lng
+      t.float :rating
       t.string :picture_url
-      t.string :type
+      t.string :food_type
 
       t.timestamps
     end

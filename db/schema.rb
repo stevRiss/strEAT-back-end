@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2021_12_15_205003) do
 
   create_table "ratings", force: :cascade do |t|
-    t.integer "rating"
+    t.float "rating"
     t.integer "user_id"
     t.integer "vendor_id"
     t.datetime "created_at", precision: 6, null: false
@@ -31,9 +31,11 @@ ActiveRecord::Schema.define(version: 2021_12_15_205003) do
   create_table "vendors", force: :cascade do |t|
     t.string "name"
     t.string "address"
-    t.integer "rating"
+    t.float "lat"
+    t.float "lng"
+    t.float "rating"
     t.string "picture_url"
-    t.string "type"
+    t.string "food_type"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
